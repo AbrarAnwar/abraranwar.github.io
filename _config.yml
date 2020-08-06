@@ -35,9 +35,9 @@ theme: minima
 plugins:
   - jekyll-feed 
 
-  header_pages:
-    - me.md 
-    - blog.md 
+header_pages:
+  - me.md 
+  - blog.md 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
