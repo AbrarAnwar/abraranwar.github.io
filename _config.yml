@@ -36,7 +36,6 @@ plugins:
   - jekyll-feed 
 
 header_pages:
-  - me.md 
   - blog.md 
 
 # Exclude from processing.
