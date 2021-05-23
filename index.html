@@ -45,21 +45,17 @@ layout:
                 Abrar Anwar
               </h1>
               <p>
-                I'm Abrar! I'm a senior in Computer Science at the <a target="_blank" href="https://www.cs.utexas.edu/">University of Texas at Austin </a> (Class of 2021)
+                Hi! I'm an incoming Ph.D student at the University of Southern California, where I'll be working with <a target="_blank" href="https://jessethomason.com/">Jesse Thomason</a> on language grounding and human-robot interaction. 
+                Previously, I was a student at UT Austin, where I worked on human-robot interaction with the <a target="_blank" href="https://www.cs.utexas.edu/~larg/bwi_web/">Building-Wide Intelligence Project</a> with <a target="_blank" href="http://justinhart.net/">Dr. Justin Hart</a>, where I focused on how robots can leverage human behavior and how humans can understand robot behavior through cues such as eye gaze. Additionally, I finished an honors thesis on deep reinforcement learning for mesh sequence refinement supervised by <a target="_blank" href="https://cvcweb.oden.utexas.edu/cvcwp/"> Dr. Chandrajit Bajaj</a>.
             </p>
-        
+
             <p>
-                At UT, I primarily conduct research with the <a target="_blank" href="https://www.cs.utexas.edu/~larg/bwi_web/">Building-Wide Intelligence Project</a> with <a target="_blank" href="http://justinhart.net/">Dr. Justin Hart</a> 
-                Here, I gained experience in robotics, localization, navigation, perception, and manipulation working on numerous projects over the years.
+
+              I previously interned at at <a target="_blank" href="https://www.sandia.gov/index.html">Sandia National Laboratories</a> with the <a target="_blank" href="https://neuroscience.sandia.gov/research/NERL_Lab.html">Neural Exploration and Research Lab</a>. In 2019, I worked with <a target="_blank" href="https://scholar.google.com/citations?user=fIhoSlAAAAAJ&hl=en">Dr. James Aimone</a> on brain-inspired navigation for a hypersonic glide vehicle. In 2020 and 2021, I have been working with <a target="_blank" href="https://neuroscience.sandia.gov/people/Vineyard.html">Dr. Craig Vineyard</a> to evolve sparse, nosie resilient, spiking neural network topologies.
+
             </p>
+
         
-            <p>
-                These last two summers, I have been interning at <a target="_blank" href="https://www.sandia.gov/index.html">Sandia National Laboratories</a>,
-                 where I have been working with the <a target="_blank" href="https://neuroscience.sandia.gov/research/NERL_Lab.html">Neural Exploration and Research Lab</a>. 
-                 In 2019, I worked with <a target="_blank" href="https://scholar.google.com/citations?user=fIhoSlAAAAAJ&hl=en">Dr. James Aimone</a> on brain-inspired navigation
-                 and rotation-invariance for a hypersonic glide vehicle. In 2020, I have been working with <a target="_blank" href="https://neuroscience.sandia.gov/people/Vineyard.html">Dr. Craig Vineyard</a>
-                 to evolve sparse, nosie resilient, spiking neural network topologies.
-            </p>
               <p style="text-align:center">
                 <a target="_blank" href="abraranwar123@gmail.com"> Email</a> &nbsp;/&nbsp;
                 <a target="_blank" href="https://github.com/AbrarAnwar">GitHub</a> &nbsp;/&nbsp;
@@ -70,10 +66,12 @@ layout:
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="/assets/images/index/profile_photo.png">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="/assets/images/index/profile_circle.png">
             </td>
           </tr>
         </table>
+
+        {%- include news.html -%}
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
@@ -121,6 +119,9 @@ layout:
               {% if post.tech_report %}
               <a href="{{post.tech_report}}">tech report</a> /
               {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}">paper</a> /
+              {% endif %}
 
               <p></p>
               {{ post.excerpt }}
@@ -155,6 +156,8 @@ layout:
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
+              <br>
+              {{post.authors}}
               <br>
               <em>{{post.type}} {{post.course}}</em>
               <br>
