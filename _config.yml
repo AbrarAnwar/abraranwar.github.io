@@ -35,6 +35,11 @@ theme: minima
 plugins:
   - jekyll-feed 
 
+collections:
+  books:
+    output: true
+    permalink: /:collection/:path/
+    sort_by: "Finish Date"
 
 permalink: /:title.html
 

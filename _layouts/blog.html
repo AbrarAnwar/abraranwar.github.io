@@ -5,6 +5,7 @@ layout: default
 {% for post in site.categories.posts %}
 <!-- <li> -->
   {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+
   <p class='blog-date'>
     {{ post.date | date: date_format }}
 
