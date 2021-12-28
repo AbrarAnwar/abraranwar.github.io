@@ -5,7 +5,7 @@ Author: Matt Haig
 Release Year: 2020
 Start Date: 2021-12-26
 Finish Date: 2021-12-27
-Cover: https://images-na.ssl-images-amazon.com/images/I/61zvUFZ+Y8L.jpg
+Cover: https://m.media-amazon.com/images/I/815-u8GACyL.jpg
 Genre: Science Fiction
 ---
 I started reading this book because I saw it won Goodreads Choice Award for Fiction in 2020. The book follows Nora Seed who after having so many bad experiences and feeling unneeded, decides to give up on life. She finds herself in The Midnight Library, where she can experience the infinite possibilities of how her life could have been. 
