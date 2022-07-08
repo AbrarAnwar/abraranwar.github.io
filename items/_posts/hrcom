@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Human-Robot Commensality: Bite Timing Prediction for Robot-Assisted Feeding in Groups"
+date:   2022-07-7 0:0:0 +00:00
+image: /assets/images/index/hrcom.png
+categories: research
+authors: Jan Ondras*, <strong>Abrar Anwar*</strong>, Tong Wu*, Fanjun Bu, Malte Jung, Jorge Jose Ortiz, Tapomayukh Bhattacharjee
+venue: Preprint
+paper: https://arxiv.org/abs/2207.03348
+---
+We develop data-driven models to predict when a robot should feed during social dining scenarios.
+We build a dataset of human-human commensality, develop
