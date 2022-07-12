@@ -13,7 +13,7 @@
 /* BASE RULES */
 /**************/
 html {
-  // background-color: #FAF9F6;
+  // background-color: #F2E5D5;
 }
 
 img {
@@ -27,10 +27,29 @@ a {
   text-decoration: none;
 }
 
+#button{
+  margin-top: 5px;
+  display: inline-block;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #1772d0;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #1772d0;
+}
+
 a:focus,
 a:hover {
   color: #f09228;
   text-decoration: none;
+}
+
+// make mobile friendly
+@media only screen and (max-device-width: 640px) {
+  td {
+    display: table-row;
+  }
 }
 
 body,
