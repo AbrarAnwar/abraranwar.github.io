@@ -6,7 +6,7 @@ image: /assets/images/index/abrar_gaze.jpg
 categories: research
 authors: Blake Holman, <strong>Abrar Anwar</strong>, Akash Singh, Mauricio Tec, Justin Hart, Peter Stone
 subtitle: "human-robot interation"
-venue: International Conference on Robotics and Automation
+venue: ICRA
 
 ---
 Leverage virtual reality to collect gaze and position data to create a predictive model and a mixed effects model to show gaze orientation precedes other features

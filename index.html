@@ -24,6 +24,8 @@ layout:
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+
+  <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" /> -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -49,16 +51,16 @@ layout:
 
               </p>
               <p>
-                I have also spent a summer at Cornell with <a target="_blank" href="https://emprise.cs.cornell.edu/"> Tapo Bhattacharjee</a> working on robot-assisted feeding.
+                I was a visiting scholar at Cornell with <a target="_blank" href="https://emprise.cs.cornell.edu/"> Tapo Bhattacharjee</a> working on assistive robotics for people with mobility limitations.
                 Previously at UT Austin, I worked on human-robot interaction with the 
                 <a target="_blank" href="https://www.cs.utexas.edu/~larg/bwi_web/">Building-Wide Intelligence Project</a> with <a target="_blank" href="http://justinhart.net/">Dr. Justin Hart</a>, 
                 where I focused on how robots can leverage human behavior and how humans can understand robot behavior through implicit cues such as eye gaze. 
-                Additionally, I completed an honors thesis with <a target="_blank" href="https://cvcweb.oden.utexas.edu/cvcwp/"> Dr. Chandrajit Bajaj</a>.
+                Additionally, I completed an honors thesis with <a target="_blank" href="https://cvcweb.oden.utexas.edu/cvcwp/"> Dr. Chandrajit Bajaj</a> in graphics and reinforcement learning.
             </p>
 
             <p>
 
-              I previously interned at at <a target="_blank" href="https://www.sandia.gov/index.html">Sandia National Laboratories</a> with 
+              I previously interned at at <a target="_blank" href="https://www.sandia.gov/index.html">Sandia National Labs</a> with 
               the <a target="_blank" href="https://neuroscience.sandia.gov/research/NERL_Lab.html">Neural Exploration and Research Lab</a>. 
               In 2019, I worked with <a target="_blank" href="https://scholar.google.com/citations?user=fIhoSlAAAAAJ&hl=en">Dr. James Aimone</a> on brain-inspired localization 
               for a hypersonic glide vehicle. In 2020 and 2021, I worked with <a target="_blank" href="https://neuroscience.sandia.gov/people/Vineyard.html">Dr. Craig Vineyard</a> 
@@ -102,12 +104,25 @@ layout:
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
 
-          {% for post in site.categories.items %}
+          {% assign postsByYear =
+            site.categories.items | group_by_exp:"post", "post.date | date: '%Y'" %}
+          
+
+          {% for year in postsByYear %}
+          <tr><td><h3>{{year.name}}</h3></td></tr>
+
+
+
+            {% for post in year.items %}
+
+
             {% for cat in post.categories %}
                 {% if cat == 'research' %}
+              
+
           <tr>
             <td style="padding:2.5%;width:27.5%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:110%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
@@ -143,7 +158,9 @@ layout:
               {{ post.excerpt }}
             </td>
           </tr>
+
           {% endif %}
+          {% endfor %}
           {% endfor %}
           {% endfor %}
         </table>
