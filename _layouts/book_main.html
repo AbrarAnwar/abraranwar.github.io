@@ -11,7 +11,7 @@ layout: default
 
 {% for year in postsByYear %}
   <h2>{{ year.name }}</h2>
-<pre><code>{% for post in year.items %} <a href="{{post.url}}">{{ post.Title }}</a> by {{post.Author}} ({{post['Finish Date'] | date: '%B'}})
+<pre><code>{% for post in year.items %} <a href="#{{post.Title}}">{{ post.Title }}</a> by {{post.Author}} ({{post['Finish Date'] | date: '%B'}})
 {% endfor %}</code></pre>
 {% endfor %}
 
@@ -23,11 +23,11 @@ layout: default
 
     {% for post in year.items %}
         
-        <div style='margin:0 0 2em 0'>
+        <div id="{{post.Title}}" style='margin:0 0 2em 0'>
             <a href="{{post.url}}">
             <img src="{{post.Cover}}" alt="post.Title" style="width:10em; float:left; margin-right: 2em;">
             </a>
-        
+
             <h2 class="blog-title"><a href="{{ post.url }}">{{ post.Title }}</a></h2>
 
             <p style="font-size: 14px; margin-top: 0; margin-bottom: 1em; line-height: .5em;"> 

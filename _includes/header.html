@@ -1,8 +1,20 @@
 <!-- <header class="site-header" role="banner" id='header-bar'> -->
 <header class="site-header">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LE5MD2QX7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-7LE5MD2QX7');
+    </script>
+
+
     <div class="wrapper">
-        <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape}}</a>
+        <a class="site-title" href="{{ "/" | relative_url }}"><font color="#83205A">{{ site.title | escape}}</font></a>
+        <!-- <span style="font-weight: 600; font-size: 32px">Abrar Anwar</span> -->
 
         <nav class="site-nav">
             <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -17,22 +29,16 @@
                 <!-- <nav class="site-nav-gap"></nav>
                 <nav class="site-nav-gap"></nav>
                 <nav class="site-nav-gap"></nav> -->
-                <a class="page-link" href="{{ '/' | relative_url }}">Home{{escape}}</a>
-                <a class="page-link" href="{{ '/books.html' | relative_url }}">Books{{escape}}</a>
+                <a class="page-link" href="{{ '/' | relative_url }}">home{{escape}}</a>
+                <a class="page-link" href="{{ '/books.html' | relative_url }}">reading{{escape}}</a>
                 <!-- <a class="page-link" href="{{ '/blog.html' | relative_url }}">Blog{{escape}}</a> -->
-                <a class="page-link" target="_blank" href="{{ '/assets/abrar_cv.pdf' | relative_url }}">CV {{escape}} </a>
+                <a class="page-link" target="_blank" href="{{ '/assets/abrar_cv.pdf' | relative_url }}">cv {{escape}} </a>
             </div>
         </nav>
-
-
-        <!-- {% assign default_paths = site.pages | map: "path" %} -->
-        <!-- <nav class="site-nav"> -->
-        <!-- </nav> -->
-
-        <!-- <nav class="site-nav"> -->
-        <!-- </nav> -->
-        <!-- <nav class="site-nav"> -->
-        <!-- </nav> -->
     </div>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="assets/svgs/academicons/css/academicons.min.css"/>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
 
 </header>

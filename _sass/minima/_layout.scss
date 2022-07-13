@@ -26,8 +26,9 @@ html {
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
+  // @include relative-font-size(1.625);
+  font-size: 32px;
+  font-weight: 600;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
