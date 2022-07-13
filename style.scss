@@ -59,6 +59,16 @@ a:hover {
   td {
     display: table-row;
   }
+  img {
+    width: 70%
+  }
+}
+
+td img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 #has-text-grey {
