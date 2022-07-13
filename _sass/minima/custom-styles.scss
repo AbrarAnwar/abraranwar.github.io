@@ -16,8 +16,6 @@
   a {
     color: #E8572A;
     text-decoration: none;
-    // border-bottom: #E8572A 0.1em solid;
-  
   }
   
   .button{
@@ -27,14 +25,14 @@
     padding: 5px 5px;
     text-align: center;
     text-decoration: none;
-    color: #E8572A;
+    color: #31918D;
     background-color: #ffffff;
     border-radius: 5px;
-    border: 1px solid #E8572A;
+    border: 1px solid #31918D;
     font-weight: 600;
   }
   .button:focus, .button:hover{
-    box-shadow: inset 100px 0 0 0 #E8572A;
+    box-shadow: inset 100px 0 0 0 #31918D;
     color: white;
   }
   
@@ -69,38 +67,22 @@
   
   
   
-  body,
-  td,
-  th,
-  tr,
-  p {
-    font-family: 'Montserrat', 'Lato', Verdana, sans-serif;
-    font-size: 16px;
-    font-display: auto;
-    color: #151419
-  }
-  
-  strong {
-    font-family: 'Montserrat', 'Lato', Verdana, sans-serif;
-    font-size: 16px;
-    font-display: auto;
-  }
   
   h2 {
-    font-family: 'Montserrat', 'Lato', Verdana, sans-serif;
-    font-size: 22px;
-    font-display: auto;
-    font-weight: normal;
+    // font-family: 'Montserrat', 'Lato', Verdana, sans-serif;
+    // font-size: 22px;
+    // font-display: auto;
+    // font-weight: normal;
     padding: 0px;
     margin: 0px;
     display:inline; 
   }
   
   h3 {
-    font-family: 'Montserrat', 'Lato', Verdana, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    font-display: auto;
+    // font-family: 'Montserrat', 'Lato', Verdana, sans-serif;
+    font-size: 18px;
+    // font-weight: 700;
+    // font-display: auto;
     padding: 0px;
     margin: 0px;
     display:inline; 
@@ -108,10 +90,10 @@
   }
   
   h1 {
-    font-family: 'Montserrat', 'Lato', Verdana, sans-serif;
-    font-size: 32px;
-    font-weight: normal;
-    font-display: auto;
+    // font-family: 'Montserrat', 'Lato', Verdana, sans-serif;
+    // font-size: 32px;
+    // font-weight: normal;
+    // font-display: auto;
     // text-align: center;
     padding: 0px;
     margin-block-start: 14px;
@@ -119,7 +101,6 @@
     margin-left: 0px;
     margin-right: 0px;
     color: #83205A
-  
   }
   
   .one {
