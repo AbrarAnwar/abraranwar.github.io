@@ -10,5 +10,4 @@ venue: Sandia National Labs Technical Report
 tech_report: https://www.osti.gov/biblio/1569159-brainslam
 
 ---
-Brain-inspired approaches to navigation and localization are explored in a noisy, data-sparse environment for a hypersonic glide vehicle. Rotation invariant feature representation methods are explored to increase accuracy and reduce map storage.
-
+We explore using brain-inspired approaches to navigation and localization in a noisy, data-sparse environment for a hypersonic glide vehicle. Rotation invariant feature representations are used to increase accuracy and reduce map storage

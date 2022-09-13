@@ -11,4 +11,4 @@ paper: https://ieeexplore.ieee.org/abstract/document/9561286
 video: https://www.youtube.com/watch?v=1QJDhHXQ-WM
 
 ---
-Leverage virtual reality to collect gaze and position data to create a predictive model and a mixed effects model to show gaze orientation precedes other features
+We leverage virtual reality to collect gaze and position data to create a predictive model and a mixed effects model to show gaze orientation precedes other features

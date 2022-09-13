@@ -36,6 +36,7 @@ html {
 
   @include media-query($on-palm) {
     padding-right: 45px;
+    padding-bottom: 10px;
   }
 
   &,
@@ -66,7 +67,7 @@ html {
 }
 .site-nav {
   position: absolute;
-  top: 9px;
+  top: -5px;
   right: $spacing-unit / 2;
   background-color: $background-color;
   border: 1px solid $border-color-01;
@@ -394,7 +395,8 @@ html {
     border-bottom: none;
     
     &:hover {
-      text-decoration: underline;
+      // empty so it can use the default hover rule
+      // text-decoration: underline;
     }
   }
 }
