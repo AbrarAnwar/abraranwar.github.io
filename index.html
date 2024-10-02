@@ -191,7 +191,15 @@ layout:
               {% if post.slides %}
               <a class="button" href="{{post.slides}}"><b>slides</b></a> 
               {% endif %}
-
+              {% if post.website %}
+              <a class="button" href="{{post.website}}"><b>website</b></a> 
+              {% endif %}
+              {% if post.blog %}
+              <a class="button" href="{{post.blog}}"><b>blog</b></a> 
+              {% endif %}
+              {% if post.twitter %}
+              <a class="button" href="{{post.twitter}}"><b>twitter</b></a> 
+              {% endif %}
               <p></p>
 
             </td>
