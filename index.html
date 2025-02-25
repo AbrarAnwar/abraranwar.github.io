@@ -200,7 +200,9 @@ layout:
               {% if post.twitter %}
               <a class="button" href="{{post.twitter}}"><b>twitter</b></a> 
               {% endif %}
-              <p></p>
+              {% if post.repo_badge %}
+              {{post.repo_badge}}
+              {% endif %}
 
             </td>
           </tr>
