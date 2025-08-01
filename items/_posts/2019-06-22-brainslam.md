@@ -6,7 +6,7 @@ image: /assets/images/index/brainslam_logo.png
 categories: research
 authors: Felix Wang, James B. Aimone, <b>Abrar Anwar</b>, Srideep Musuvathy.
 subtitle: "brain-inspired navigation"
-venue: Sandia National Labs Technical Report
+venue: Sandia National Labs Technical Report, 2019
 tech_report: https://www.osti.gov/biblio/1569159-brainslam
 
 ---

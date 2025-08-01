@@ -6,7 +6,7 @@ categories: research
 image: /assets/images/index/contrast_sets.png
 categories: research
 authors: <b>Abrar Anwar*</b>, Rohan Gupta*, Jesse Thomason
-venue: CoRL
+venue: CoRL 2024
 arxiv: https://arxiv.org/abs/2406.13636
 # paper: https://openreview.net/forum?id=7ZcePvChS7u
 twitter: https://x.com/_abraranwar/status/1841298234783985677

@@ -6,7 +6,7 @@ image: /assets/images/index/abrar_gaze.jpg
 categories: research
 authors: Blake Holman, <b>Abrar Anwar</b>, Akash Singh, Mauricio Tec, Justin Hart, Peter Stone
 subtitle: "human-robot interation"
-venue: ICRA
+venue: ICRA 2021
 paper: https://ieeexplore.ieee.org/abstract/document/9561286
 video: https://www.youtube.com/watch?v=1QJDhHXQ-WM
 
