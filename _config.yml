@@ -74,6 +74,8 @@ kramdown:
 # Redesign drafts and local-dev files: kept in the repo, not published.
 exclude:
   - drafts/
+  - books.html
+  - _books/
   - EDITING.md
   - Gemfile
   - Gemfile.lock
