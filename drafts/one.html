@@ -1,0 +1,170 @@
+---
+layout:
+title: Abrar Anwar — Draft 1 (Editorial)
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abrar Anwar · draft 1</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/svgs/academicons/css/academicons.min.css' | relative_url }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --paper:#FDFBF6;
+    --ink:#20201E;
+    --muted:#7d786f;
+    --rule:#e6e0d4;
+    --accent:#E8572A;   /* orange, from the current site */
+    --accent-2:#31918D; /* teal */
+    --accent-3:#83205A; /* plum */
+  }
+  *{box-sizing:border-box}
+  html{-webkit-font-smoothing:antialiased}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+    font-size:19px; line-height:1.62; text-rendering:optimizeLegibility;
+  }
+  .page{max-width:720px;margin:0 auto;padding:0 24px 96px}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(232,87,42,.28)}
+  a:hover{border-bottom-color:var(--accent)}
+
+  /* header */
+  .topbar{display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+          padding:34px 0 30px;flex-wrap:wrap}
+  .brand{font-size:23px;font-weight:600;letter-spacing:.01em;color:var(--ink);border:0}
+  .topnav{display:flex;gap:20px;font-size:16px;letter-spacing:.06em;text-transform:lowercase}
+  .topnav a{color:var(--muted);border:0}
+  .topnav a:hover{color:var(--accent)}
+
+  /* intro */
+  .intro{display:flex;gap:34px;align-items:flex-start}
+  .intro p{margin:0 0 15px}
+  .intro p:first-child{margin-top:0}
+  .portrait{flex:0 0 168px}
+  .portrait img{width:168px;height:168px;object-fit:cover;border-radius:3px;display:block;
+                filter:saturate(1.02)}
+  .portrait .contact{margin-top:12px;font-size:15px;color:var(--muted);line-height:1.5}
+  .iconrow{margin-top:9px;display:flex;gap:14px;font-size:19px}
+  .iconrow a{color:var(--muted);border:0}
+  .iconrow a:hover{color:var(--accent-2)}
+  .bio-callout{margin-top:20px !important;padding-left:16px;border-left:3px solid var(--accent-3);
+               color:#4a453e;font-style:italic}
+
+  /* section headings */
+  h2.sec{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+         color:var(--accent-3);margin:56px 0 0;padding-bottom:8px}
+  h2.sec + .rule{height:1px;background:var(--rule);margin-bottom:22px}
+
+  /* news */
+  .news li{display:flex;gap:18px;padding:7px 0;list-style:none}
+  .news ul{margin:0;padding:0}
+  .news .when{flex:0 0 84px;color:var(--muted);font-variant-numeric:tabular-nums;font-size:16.5px;
+              padding-top:2px}
+  .news .what{font-size:17.5px}
+  details.more{margin-top:10px}
+  details.more summary{cursor:pointer;color:var(--accent-2);font-size:16px;list-style:none;
+                       letter-spacing:.03em}
+  details.more summary::-webkit-details-marker{display:none}
+  details.more summary::before{content:"+ ";}
+  details.more[open] summary::before{content:"– ";}
+
+  /* publications */
+  .yr{margin:34px 0 12px;font-size:15px;letter-spacing:.14em;color:var(--muted)}
+  .pub{display:flex;gap:22px;padding:16px 0;border-top:1px solid var(--rule)}
+  .pub:first-of-type{border-top:0}
+  .pub .thumb{flex:0 0 150px}
+  .pub .thumb img{width:100%;border-radius:3px;display:block}
+  .pub .t{font-size:19px;font-weight:600;line-height:1.32;margin-bottom:4px}
+  .pub .a{font-size:16px;color:#4a453e;margin-bottom:4px}
+  .pub .a b{font-weight:600;color:var(--ink)}
+  .pub .d{font-size:16px;color:var(--muted);margin-bottom:6px}
+  .pub .v{font-size:16px;font-style:italic;color:var(--accent-3);margin-bottom:8px}
+  .pub-link{display:inline-block;font-size:14px;letter-spacing:.04em;color:var(--accent-2);
+            border:0;border-bottom:1px solid rgba(49,145,141,.35);margin-right:14px}
+  .pub-link:hover{border-bottom-color:var(--accent-2)}
+
+  footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--rule);
+         font-size:15px;color:var(--muted);text-align:center}
+
+  @media (max-width:640px){
+    body{font-size:18px}
+    .intro{flex-direction:column-reverse;gap:22px}
+    .portrait{flex:none;display:flex;gap:18px;align-items:center}
+    .portrait img{width:120px;height:120px}
+    .pub{flex-direction:column;gap:12px}
+    .pub .thumb{flex:none;max-width:280px}
+    .news li{flex-direction:column;gap:0}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="topbar">
+    <a class="brand" href="{{ '/' | relative_url }}">Abrar Anwar</a>
+    <nav class="topnav">
+      <a href="#news">news</a>
+      <a href="#research">research</a>
+      <a href="{{ '/books.html' | relative_url }}">reading</a>
+    </nav>
+  </div>
+
+  <div class="intro">
+    <div class="text">{% include bio.html %}</div>
+    <div class="portrait">
+      <img alt="Abrar Anwar" src="{{ '/assets/images/index/abrar.png' | relative_url }}">
+      <div class="contact">abrar.anwar [at] usc [dot] edu</div>
+      <div class="iconrow">
+        <a title="Google Scholar" target="_blank" href="https://scholar.google.com/citations?user=c6E-5tcAAAAJ&hl=en"><i class="ai ai-google-scholar-square"></i></a>
+        <a title="GitHub" target="_blank" href="https://github.com/abraranwar"><i class="fab fa-github"></i></a>
+        <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/abraranwar"><i class="fab fa-linkedin"></i></a>
+        <a title="Twitter" target="_blank" href="https://twitter.com/_abraranwar"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="sec" id="news">News</h2><div class="rule"></div>
+  <div class="news">
+    <ul>
+      {% for n in site.data.news %}{% if n.recent %}
+      <li><span class="when">{{ n.date }}</span><span class="what">{{ n.html }}</span></li>
+      {% endif %}{% endfor %}
+    </ul>
+    <details class="more">
+      <summary>2023 and earlier</summary>
+      <ul>
+        {% for n in site.data.news %}{% unless n.recent %}
+        <li><span class="when">{{ n.date }}</span><span class="what">{{ n.html }}</span></li>
+        {% endunless %}{% endfor %}
+      </ul>
+    </details>
+  </div>
+
+  <h2 class="sec" id="research">Research</h2><div class="rule"></div>
+  {% assign postsByYear = site.categories.items | group_by_exp:"post","post.date | date: '%Y'" %}
+  {% for year in postsByYear %}
+    <div class="yr">{{ year.name }}</div>
+    {% for post in year.items %}{% if post.categories contains 'research' %}
+    <div class="pub">
+      <div class="thumb"><img src="{{ post.image | relative_url }}" alt="{{ post.title }}"></div>
+      <div class="meta">
+        <div class="t">{{ post.title }}</div>
+        <div class="a">{{ post.authors }}</div>
+        <div class="d">{{ post.excerpt | remove:'<p>' | remove:'</p>' }}</div>
+        <div class="v">{{ post.venue }}</div>
+        <div>{% include pub_links.html post=post %}</div>
+      </div>
+    </div>
+    {% endif %}{% endfor %}
+  {% endfor %}
+
+  <footer>Design and source code adapted from <a href="https://jonbarron.info">Jon Barron's website</a></footer>
+</div>
+</body>
+</html>

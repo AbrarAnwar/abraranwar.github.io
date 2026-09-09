@@ -1,0 +1,106 @@
+---
+layout:
+title: Experience section drafts
+---
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>experience drafts</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+ :root{--paper:#FDFBF6;--ink:#20201E;--body:#4a453e;--muted:#7d786f;--rule:#e6e0d4;
+       --orange:#E8572A;--teal:#31918D;--plum:#83205A;--gold:#E0A038}
+ *{box-sizing:border-box}
+ body{font-family:"EB Garamond",Georgia,serif;background:var(--paper);color:var(--ink);
+      font-size:19px;line-height:1.62;max-width:800px;margin:0 auto;padding:52px 26px 90px}
+ a{color:var(--orange);text-decoration:none}
+ h1{font-weight:600;font-size:30px;margin:0 0 4px}
+ .sub{color:var(--muted);margin-bottom:12px}
+ .note{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:12px 16px;
+       font-size:17px;color:var(--body);margin-bottom:40px}
+ h2.sec{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+        color:var(--plum);margin:54px 0 0;padding-bottom:8px}
+ h2.sec + .rule{height:1px;background:var(--rule);margin-bottom:22px}
+ .variant{font-size:16px;color:var(--muted);margin:-14px 0 20px}
+
+ /* ---------- A: cards ---------- */
+ .exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+ .exp-card{display:flex;flex-direction:column;align-items:center;text-align:center;
+           padding:20px 14px 16px;border:1px solid var(--rule);border-radius:10px;background:#fff;
+           transition:transform .25s,box-shadow .25s,border-color .25s}
+ .exp-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(32,32,30,.08);
+                 border-color:#d8cfbe}
+ .exp-logo{height:44px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+ .exp-logo img{max-height:40px;max-width:140px;width:auto;object-fit:contain;
+               filter:grayscale(100%);opacity:.68;transition:filter .3s,opacity .3s}
+ .exp-card:hover .exp-logo img{filter:grayscale(0);opacity:1}
+ .exp-logo .fallback{font-family:"Newsreader",serif;font-size:22px;line-height:1.1;
+                     color:var(--ink);opacity:.75;transition:opacity .3s,color .3s}
+ .exp-card:hover .fallback{opacity:1;color:var(--plum)}
+ .exp-org{font-weight:600;font-size:17.5px;line-height:1.25;margin-bottom:2px}
+ .exp-group{font-size:15.5px;color:var(--teal);line-height:1.3;margin-bottom:3px}
+ .exp-dates{font-size:15px;color:var(--muted);font-style:italic}
+
+ /* ---------- B: editorial rows ---------- */
+ .exp-row{display:grid;grid-template-columns:132px 1fr;gap:20px;padding:11px 0;
+          border-top:1px solid var(--rule)}
+ .exp-row:first-of-type{border-top:0}
+ .exp-row .when{color:var(--muted);font-size:16.5px;font-style:italic;padding-top:1px}
+ .exp-row .what .o{font-weight:600}
+ .exp-row .what .g{color:var(--teal)}
+
+ /* ---------- C: inline one-liner ---------- */
+ .exp-inline{font-size:18.5px;color:var(--body)}
+ .exp-inline .o{color:var(--ink);font-weight:600}
+ .exp-inline .sep{color:var(--rule);margin:0 9px}
+
+ footer{margin-top:60px;font-size:16px;color:var(--muted)}
+</style></head><body>
+
+<h1>Experience section</h1>
+<div class="sub">Three treatments of the same four entries. No job titles anywhere &mdash; the
+second line names the lab or group instead.</div>
+<div class="note">
+  <b>Logos:</b> none of these institution logos are in the repo yet, so the cards fall back to the
+  name set in Newsreader. Drop files at <code>assets/images/logos/{utaustin,sandia,cornell,nvidia}.png</code>
+  and variant A picks them up automatically &mdash; no code change. Content lives in
+  <code>_data/experience.yml</code>.
+</div>
+
+<h2 class="sec">A &middot; Logo cards</h2><div class="rule"></div>
+<div class="variant">Closest to Anthony's. Grayscale logo that colors on hover, card lifts.</div>
+<div class="exp-grid">
+  {% for e in site.data.experience %}
+  <a class="exp-card" href="{{ e.href }}" target="_blank">
+    <div class="exp-logo">
+      {% if e.logo %}
+        <img src="{{ e.logo | relative_url }}" alt="{{ e.org }}"
+             onerror="this.outerHTML='<span class=\'fallback\'>{{ e.org }}</span>'">
+      {% else %}<span class="fallback">{{ e.org }}</span>{% endif %}
+    </div>
+    <div class="exp-org">{{ e.org }}</div>
+    <div class="exp-group">{{ e.role }}</div>
+    <div class="exp-dates">{{ e.dates }}</div>
+  </a>
+  {% endfor %}
+</div>
+
+<h2 class="sec">B &middot; Editorial rows</h2><div class="rule"></div>
+<div class="variant">Matches the news list in draft 4 &mdash; dates in the left gutter, hairline rules.</div>
+{% for e in site.data.experience %}
+<div class="exp-row">
+  <div class="when">{{ e.dates }}</div>
+  <div class="what"><span class="o">{{ e.org }}</span> &mdash; <span class="g">{{ e.role }}</span></div>
+</div>
+{% endfor %}
+
+<h2 class="sec">C &middot; One line</h2><div class="rule"></div>
+<div class="variant">Most compact. Works if you'd rather not give this a whole section.</div>
+<div class="exp-inline">
+  {% for e in site.data.experience %}<a href="{{ e.href }}" target="_blank" style="border:0"><span class="o">{{ e.role }}</span> @ {{ e.org }}</a> <span style="color:#7d786f">({{ e.dates }})</span>{% unless forloop.last %}<span class="sep">&middot;</span>{% endunless %}{% endfor %}
+</div>
+
+<footer>Back to <a href="{{ '/drafts/' | relative_url }}">drafts</a> &middot;
+<a href="{{ '/drafts/four.html' | relative_url }}">draft 4</a></footer>
+</body></html>

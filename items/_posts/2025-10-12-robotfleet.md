@@ -4,6 +4,8 @@ title:  "RobotFleet: An Open-Source Framework for Centralized Multi-Robot Task P
 date:   2025-10-12 0:0:0 +00:00
 categories: research
 image: /assets/images/index/robotfleet.png
+gif: /assets/images/index/gifs/robotfleet.gif
+mp4: /assets/images/index/gifs/robotfleet.mp4
 categories: research
 authors: Rohan Gupta*, Trevor Asbery*, Zain Merchant*, <b>Abrar Anwar</b>, Jesse Thomason
 venue: Multi-Robot Systems Workshop @ RSS 2025.

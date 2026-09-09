@@ -1,0 +1,174 @@
+---
+layout:
+title: Abrar Anwar — Draft 3 (Sidebar)
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abrar Anwar · draft 3</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/svgs/academicons/css/academicons.min.css' | relative_url }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --bg:#FCFCFA;
+    --ink:#1d1c1a;
+    --muted:#8b867d;
+    --line:#e8e4db;
+    --teal:#2E8C88;
+    --plum:#83205A;
+    --orange:#E8572A;
+    --gold:#E0A038;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:"EB Garamond",Georgia,serif;font-size:19px;line-height:1.62;
+       -webkit-font-smoothing:antialiased}
+  a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(46,140,136,.3)}
+  a:hover{color:var(--orange);border-bottom-color:rgba(232,87,42,.55)}
+  .shell{display:grid;grid-template-columns:264px 1fr;gap:64px;max-width:1080px;
+         margin:0 auto;padding:0 32px}
+
+  /* sidebar */
+  .side{position:sticky;top:0;align-self:start;height:100vh;padding:56px 0 32px;
+        display:flex;flex-direction:column}
+  .side img{width:112px;height:112px;border-radius:50%;object-fit:cover;display:block;
+            border:1px solid var(--line)}
+  .side h1{font-family:"Newsreader",serif;font-weight:400;font-size:33px;line-height:1.1;
+           margin:20px 0 6px;letter-spacing:-.005em}
+  .side .role{font-size:16.5px;color:var(--muted);line-height:1.45}
+  .side .role em{font-style:italic;color:var(--plum)}
+  .side .mail{font-size:15.5px;color:var(--muted);margin-top:12px}
+  .side .icons{display:flex;gap:14px;margin-top:10px;font-size:18px}
+  .side .icons a{color:var(--muted);border:0}
+  .side .icons a:hover{color:var(--teal)}
+  .sidenav{margin-top:26px;display:flex;flex-direction:column;gap:9px;
+           font-size:16px;letter-spacing:.05em}
+  .sidenav a{color:#5c574f;border:0;display:flex;align-items:center;gap:9px}
+  .sidenav a i{width:6px;height:6px;border-radius:50%;background:var(--line);
+               display:inline-block;transition:background .2s,transform .2s}
+  .sidenav a:hover{color:var(--ink)}
+  .sidenav a:nth-child(1):hover i{background:var(--orange)}
+  .sidenav a:nth-child(2):hover i{background:var(--teal)}
+  .sidenav a:nth-child(3):hover i{background:var(--plum)}
+  .sidenav a:nth-child(4):hover i{background:var(--gold)}
+  .sidenav a:hover i{transform:scale(1.5)}
+  .side .foot{margin-top:auto;font-size:14px;color:#b3ada2}
+
+  /* main */
+  .main{padding:56px 0 100px;max-width:660px}
+  .main p{margin:0 0 15px}
+  .bio-callout{margin-top:20px !important;font-size:18px;color:#4c4740;
+               background:linear-gradient(90deg,rgba(240,166,59,.14),rgba(240,166,59,0));
+               border-left:2px solid var(--gold);padding:10px 14px}
+  h2.sec{font-family:"Newsreader",serif;font-weight:400;font-size:15px;letter-spacing:.22em;
+         text-transform:uppercase;color:var(--muted);margin:60px 0 4px}
+  .gradrule{height:2px;margin-bottom:24px;
+            background:linear-gradient(90deg,var(--orange),var(--gold) 28%,var(--teal) 62%,var(--plum));
+            opacity:.75;border-radius:2px}
+
+  /* news */
+  .news-row{display:grid;grid-template-columns:88px 1fr;gap:16px;padding:7px 0}
+  .news-row .when{color:var(--muted);font-size:16px;padding-top:2px}
+  details.more{margin-top:12px}
+  details.more summary{cursor:pointer;color:var(--muted);font-size:16px;letter-spacing:.04em}
+  details.more summary:hover{color:var(--teal)}
+
+  /* publications timeline */
+  .tl{position:relative;padding-left:26px}
+  .tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:1px;background:var(--line)}
+  .yr{position:relative;font-family:"Newsreader",serif;font-size:17px;color:var(--muted);
+      margin:30px 0 12px;letter-spacing:.1em}
+  .yr::before{content:"";position:absolute;left:-26px;top:9px;width:9px;height:9px;
+              border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px var(--bg)}
+  .yr:nth-of-type(2n)::before{background:var(--teal)}
+  .yr:nth-of-type(3n)::before{background:var(--plum)}
+  .pub{display:grid;grid-template-columns:132px 1fr;gap:18px;padding:14px 0 14px 14px;
+       margin-left:-14px;border-radius:8px;transition:background .2s}
+  .pub:hover{background:#fff}
+  .pub img{width:100%;border-radius:5px;display:block;border:1px solid var(--line)}
+  .pub .t{font-family:"Newsreader",serif;font-size:20px;font-weight:500;line-height:1.28;
+          margin-bottom:3px}
+  .pub .a{font-size:16px;color:#5c574f}
+  .pub .d{font-size:16px;color:var(--muted);margin:4px 0 5px}
+  .pub .v{font-size:15.5px;font-style:italic;color:var(--plum);margin-bottom:6px}
+  .pub-link{font-size:14px;color:var(--teal);border:0;margin-right:12px;
+            border-bottom:1px dotted rgba(46,140,136,.5)}
+  .pub-link:hover{border-bottom-style:solid}
+
+  @media (max-width:860px){
+    .shell{grid-template-columns:1fr;gap:0;padding:0 24px}
+    .side{position:static;height:auto;padding:40px 0 8px}
+    .side .foot{display:none}
+    .sidenav{flex-direction:row;flex-wrap:wrap;gap:18px}
+    .main{padding-top:20px}
+    .pub{grid-template-columns:1fr}
+    .pub img{max-width:280px}
+    .news-row{grid-template-columns:1fr;gap:0}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="side">
+    <img alt="Abrar Anwar" src="{{ '/assets/images/index/abrar.png' | relative_url }}">
+    <h1>Abrar<br>Anwar</h1>
+    <div class="role">Ph.D. student at <em>USC</em><br>language-guided robots &amp; HRI</div>
+    <div class="mail">abrar.anwar [at] usc [dot] edu</div>
+    <div class="icons">
+      <a title="Google Scholar" target="_blank" href="https://scholar.google.com/citations?user=c6E-5tcAAAAJ&hl=en"><i class="ai ai-google-scholar-square"></i></a>
+      <a title="GitHub" target="_blank" href="https://github.com/abraranwar"><i class="fab fa-github"></i></a>
+      <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/abraranwar"><i class="fab fa-linkedin"></i></a>
+      <a title="Twitter" target="_blank" href="https://twitter.com/_abraranwar"><i class="fab fa-twitter"></i></a>
+    </div>
+    <nav class="sidenav">
+      <a href="#about"><i></i>about</a>
+      <a href="#news"><i></i>news</a>
+      <a href="#research"><i></i>research</a>
+      <a href="{{ '/books.html' | relative_url }}"><i></i>reading</a>
+    </nav>
+    <div class="foot">Adapted from <a href="https://jonbarron.info" style="color:#b3ada2">Jon Barron's</a> site</div>
+  </aside>
+
+  <main class="main" id="about">
+    {% include bio.html %}
+
+    <h2 class="sec" id="news">News</h2><div class="gradrule"></div>
+    {% for n in site.data.news %}{% if n.recent %}
+    <div class="news-row"><div class="when">{{ n.date }}</div><div>{{ n.html }}</div></div>
+    {% endif %}{% endfor %}
+    <details class="more">
+      <summary>2023 and earlier →</summary>
+      {% for n in site.data.news %}{% unless n.recent %}
+      <div class="news-row"><div class="when">{{ n.date }}</div><div>{{ n.html }}</div></div>
+      {% endunless %}{% endfor %}
+    </details>
+
+    <h2 class="sec" id="research">Research</h2><div class="gradrule"></div>
+    <div class="tl">
+    {% assign postsByYear = site.categories.items | group_by_exp:"post","post.date | date: '%Y'" %}
+    {% for year in postsByYear %}
+      <div class="yr">{{ year.name }}</div>
+      {% for post in year.items %}{% if post.categories contains 'research' %}
+      <div class="pub">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        <div>
+          <div class="t">{{ post.title }}</div>
+          <div class="a">{{ post.authors }}</div>
+          <div class="d">{{ post.excerpt | remove:'<p>' | remove:'</p>' }}</div>
+          <div class="v">{{ post.venue }}</div>
+          {% include pub_links.html post=post %}
+        </div>
+      </div>
+      {% endif %}{% endfor %}
+    {% endfor %}
+    </div>
+  </main>
+</div>
+</body>
+</html>

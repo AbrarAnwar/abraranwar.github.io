@@ -1,0 +1,106 @@
+---
+layout:
+title: GIF previews
+---
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>paper gifs</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+ :root{--paper:#FDFBF6;--ink:#20201E;--muted:#7d786f;--rule:#e6e0d4;--orange:#E8572A;--plum:#83205A;--teal:#31918D}
+ body{font-family:"EB Garamond",Georgia,serif;background:var(--paper);color:var(--ink);
+      font-size:19px;line-height:1.6;max-width:1000px;margin:0 auto;padding:52px 26px 90px}
+ h1{font-weight:600;font-size:30px;margin:0 0 4px}
+ .sub{color:var(--muted);margin-bottom:34px}
+ a{color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(232,87,42,.28)}
+ .item{display:grid;grid-template-columns:400px 1fr;gap:26px;padding:22px 0;
+       border-top:1px solid var(--rule);align-items:start}
+ .plate{aspect-ratio:16/10;background:#fff;border:1px solid var(--rule);border-radius:4px;
+        padding:7px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+ .plate img{max-width:100%;max-height:100%;width:auto;height:auto;display:block}
+ .t{font-size:21px;font-weight:600;line-height:1.3}
+ .meta{font-size:16px;color:var(--muted);margin:6px 0 8px}
+ .src{font-size:16px}
+ .src .from{color:var(--muted)}
+ .tag{display:inline-block;font-size:14px;background:rgba(131,32,90,.09);color:var(--plum);
+      border-radius:20px;padding:2px 11px;margin-right:6px}
+ code{font-family:ui-monospace,Menlo,monospace;font-size:14px;color:var(--teal)}
+</style></head><body>
+<h1>Paper GIFs</h1>
+<div class="sub">Seven loops cut from existing footage. Files are in <code>assets/images/index/gifs/</code>
+ — each has a matching <code>.mp4</code> at the same name.</div>
+
+<div class="item">
+  <div class="plate"><img src="{{ '/assets/images/index/gifs/rewind.gif' | relative_url }}" alt="ReWiND"></div>
+  <div>
+    <div class="t">ReWiND: Language-Guided Rewards Teach Robot Policies without New Demonstrations</div>
+    <div class="meta"><span class="tag">CoRL 2025</span>1.1 MB · 6.0s · 300×168 · 10fps</div>
+    <div class="src">First 6 seconds of the site's intro reel, unaltered speed.<br>
+      <span class="from">Source: rewind-reward.github.io — static/videos/website_intro.mp4</span></div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="plate"><img src="{{ '/assets/images/index/gifs/in-mouth.gif' | relative_url }}" alt="Feel the Bite"></div>
+  <div>
+    <div class="t">Feel the Bite: Robot-Assisted Inside-Mouth Bite Transfer</div>
+    <div class="meta"><span class="tag">HRI 2024</span>1.2 MB · 4.6s · 300×152 · 10fps</div>
+    <div class="src">Arm delivering a bite; burned-in caption bar cropped off the bottom.<br>
+      <span class="from">Source: bitetransfer teaser_video_no_sound.mp4 @ 37.5s</span></div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="plate"><img src="{{ '/assets/images/index/gifs/hrcom.gif' | relative_url }}" alt="Human-Robot Commensality"></div>
+  <div>
+    <div class="t">Human-Robot Commensality: Bite Timing Prediction for Robot-Assisted Feeding in Groups</div>
+    <div class="meta"><span class="tag">CoRL 2022</span>878 KB · 5.0s · 300×168 · 10fps</div>
+    <div class="src">The robot reaching out and feeding the user, with two co-diners at the table.<br>
+      <span class="from">Source: YouTube talk 5KLGrvrPjMc @ 350.6s; the slide's embedded video region cropped out</span></div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="plate"><img src="{{ '/assets/images/index/gifs/remembr.gif' | relative_url }}" alt="ReMEmbR"></div>
+  <div>
+    <div class="t">ReMEmbR: Long-Horizon Spatio-Temporal Memory for Robot Navigation</div>
+    <div class="meta"><span class="tag">ICRA 2025</span>1.4 MB · 4.1s · 300×168 · 10fps</div>
+    <div class="src">Nova Carter driving the building during the memory-building phase.<br>
+      <span class="from">Source: NVIDIA video JlYVBAQC0tQ @ 0.5s</span></div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="plate"><img src="{{ '/assets/images/index/gifs/robometer.gif' | relative_url }}" alt="Robometer"></div>
+  <div>
+    <div class="t">Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons</div>
+    <div class="meta"><span class="tag">RSS 2026</span>1.2 MB &middot; 5.4s &middot; 300&times;168 &middot; 10fps</div>
+    <div class="src">&ldquo;Flip the bottle upright&rdquo; rollout with the live Robometer reward curve overlaid.<br>
+      <span class="from">Source: robometer.github.io &mdash; assets/robometer_teaser_video.mp4 @ 15s</span></div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="plate"><img src="{{ '/assets/images/index/gifs/steering.gif' | relative_url }}" alt="Mechanistic Finetuning"></div>
+  <div>
+    <div class="t">Mechanistic Finetuning of Vision-Language-Action Models via Few-Shot Demonstrations</div>
+    <div class="meta"><span class="tag">In submission</span>965 KB · 6.0s · 300×272 · 10fps</div>
+    <div class="src">The four robustness rollouts &mdash; target task, lighting change, distractors, form change.<br>
+      <span class="from">Source: YouTube 48g11nhTYvk @ 84s; right-hand panel cropped out of the slide</span></div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="plate"><img src="{{ '/assets/images/index/gifs/robotfleet.gif' | relative_url }}" alt="RobotFleet"></div>
+  <div>
+    <div class="t">RobotFleet: Centralized Multi-Robot Task Planning</div>
+    <div class="meta"><span class="tag">RSS 2025 Workshop</span>1.1 MB · 4.3s · 300×168 · 10fps</div>
+    <div class="src">Locobot and HSR executing the two-cup fetch.<br>
+      <span class="from">Source: YouTube 1L4maFDmo-o @ 88s</span></div>
+  </div>
+</div>
+
+<p style="margin-top:34px;color:#7d786f;font-size:17px">
+Back to <a href="{{ '/drafts/' | relative_url }}">drafts</a> · <a href="{{ '/drafts/four.html' | relative_url }}">draft 4</a></p>
+</body></html>

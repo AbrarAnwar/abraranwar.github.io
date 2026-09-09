@@ -70,3 +70,11 @@ kramdown:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Redesign drafts and local-dev files: kept in the repo, not published.
+exclude:
+  - drafts/
+  - EDITING.md
+  - Gemfile
+  - Gemfile.lock
+  - old_index.html
