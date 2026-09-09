@@ -7,7 +7,7 @@ image: /assets/images/index/robometer.png
 gif: /assets/images/index/gifs/robometer.gif
 mp4: /assets/images/index/gifs/robometer.mp4
 authors: Anthony Liang*, Yigit Korkmaz*, Jiahui Zhang, Minyoung Hwang, <b>Abrar Anwar</b>, Sidhant Kaushik, Aditya Shah, Alex S. Huang, Luke Zettlemoyer, Dieter Fox, Yu Xiang, Anqi Li, Andreea Bobu, Abhishek Gupta, Stephen Tu, Erdem Biyik, Jesse Zhang
-venue: RSS 2026 <br> <font color="#ff0000">(Oral Presentation)</font> at RL4IL Workshop @ ICRA 2026
+venue: RSS 2026 <br> RL4IL Workshop @ ICRA 2026 <font color="#ff0000">(Oral Presentation)</font>
 website: https://robometer.github.io/
 arxiv: https://arxiv.org/abs/2603.02115
 ---
