@@ -93,6 +93,21 @@ layout:
   details.more summary::-webkit-details-marker{display:none}
   details.more summary::before{content:"+ "}
   details.more[open] summary::before{content:"– "}
+  .news-scroll{position:relative;max-height:15rem;overflow-y:scroll;margin-top:8px;
+               padding:4px 14px 4px 12px;background:#fffdf8;
+               border:1px solid var(--rule);border-radius:6px;
+               scrollbar-width:thin;scrollbar-color:#c9bda8 #f1ebdd}
+  .news-scroll::-webkit-scrollbar{width:10px}
+  .news-scroll::-webkit-scrollbar-track{background:#f1ebdd;border-radius:0 6px 6px 0}
+  .news-scroll::-webkit-scrollbar-thumb{background:#c9bda8;border-radius:5px;
+               border:2px solid #f1ebdd}
+  .news-scroll::-webkit-scrollbar-thumb:hover{background:#b3a68e}
+  .news-wrap{position:relative}
+  .news-wrap::after{content:"";position:absolute;left:1px;right:11px;bottom:1px;height:34px;
+               border-radius:0 0 6px 6px;pointer-events:none;
+               background:linear-gradient(to bottom,rgba(255,253,248,0),#fffdf8 88%)}
+  .news-wrap .hint{display:block;text-align:right;font-size:13.5px;color:var(--muted);
+               letter-spacing:.04em;margin-top:5px}
 
   /* publications: draft 3's year timeline, draft 1's hairline rows */
   .tl{position:relative;padding-left:28px}
@@ -168,9 +183,15 @@ layout:
     {% endif %}{% endfor %}
     <details class="more">
       <summary>Older news</summary>
-      {% for n in site.data.news %}{% unless n.recent %}
-      <div class="news-row"><div class="when">{{ n.date }}</div><div class="what">{{ n.html }}</div></div>
-      {% endunless %}{% endfor %}
+      {% assign archived = site.data.news | where_exp: "n", "n.recent != true" %}
+      <div class="news-wrap">
+        <div class="news-scroll">
+        {% for n in archived %}
+        <div class="news-row"><div class="when">{{ n.date }}</div><div class="what">{{ n.html }}</div></div>
+        {% endfor %}
+        </div>
+      </div>
+      <span class="hint">scroll for all {{ archived | size }} &darr;</span>
     </details>
 
     <h2 class="sec" id="research">Research</h2><div class="rule"></div>
