@@ -21,12 +21,17 @@
 title: Abrar Anwar 
 email: abraranwar123@gmail.com 
 description: >- # this means to ignore newlines until "baseurl:"
+  Abrar Anwar is a robotics researcher at NVIDIA on the Isaac Loco-Manipulation team,
+  working on reinforcement learning post-training of robot foundation models. Previously
+  a PhD student at USC with Jesse Thomason on language-guided robot learning and evaluation.
 
 future: true
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
+url: "https://abraranwar.github.io" # the base hostname & protocol for your site
+twitter:
+  username: _abraranwar
+  card: summary
 github_username:  AbrarAnwar 
 linkedin: abraranwar 
 

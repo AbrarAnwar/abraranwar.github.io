@@ -1,5 +1,6 @@
 ---
 layout:
+image: /assets/images/index/abrar.png
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -139,6 +140,14 @@ layout:
   .pub-link{display:inline-block;font-size:13px;letter-spacing:.04em;color:var(--teal);
             border:0;border-bottom:1px solid rgba(49,145,141,.35);margin-right:11px}
   .pub-link:hover{border-bottom-color:var(--teal)}
+  .talk{display:grid;grid-template-columns:104px 1fr;gap:20px;padding:9px 0;
+        border-top:1px solid var(--rule)}
+  .talk:first-of-type{border-top:0}
+  .talk .when{color:var(--muted);font-size:15.5px;padding-top:2px}
+  .talk .tt{font-size:17px;line-height:1.32}
+  .talk .tt a{border:0;color:var(--ink)}
+  .talk .tt a:hover{color:var(--orange)}
+  .talk .tv{font-size:15.5px;color:var(--muted);font-style:italic;line-height:1.4}
 
   @media (max-width:860px){
     .shell{grid-template-columns:1fr;gap:0;padding:0 24px}
@@ -170,6 +179,7 @@ layout:
       <a href="#about"><i></i>about</a>
       <a href="#news"><i></i>news</a>
       <a href="#research"><i></i>research</a>
+      <a href="#talks"><i></i>talks</a>
     </nav>
   </aside>
 
@@ -220,6 +230,17 @@ layout:
       {% endif %}{% endfor %}
     {% endfor %}
     </div>
+    <h2 class="sec" id="talks">Talks</h2><div class="rule"></div>
+    {% for t in site.data.talks %}
+    <div class="talk">
+      <div class="when">{{ t.date }}</div>
+      <div>
+        <div class="tt">{% if t.href %}<a href="{{ t.href }}" target="_blank">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</div>
+        <div class="tv">{{ t.venue }}</div>
+      </div>
+    </div>
+    {% endfor %}
+
   </main>
 </div>
 </body>

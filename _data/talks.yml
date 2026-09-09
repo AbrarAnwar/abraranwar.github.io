@@ -1,0 +1,27 @@
+# Invited talks and presentations. Newest first; `date` is shown in the left gutter.
+# `href` is optional — add one and the title becomes a link.
+- date: Mar 2026
+  title: Efficient Evaluation of Multi-Task Robot Policies with Active Experiment Selection
+  venue: Invited talk, UT Austin Robot Learning Reading Group
+- date: Feb 2025
+  title: Memory, Learning, and Evaluating Language-Guided Robots
+  venue: Invited talk, Samsung Research America
+- date: Jan 2025
+  title: Invited panelist
+  venue: Dennis Washington Leadership Scholarship Reception, Palm Desert, CA
+- date: Dec 2024
+  title: Building and Evaluating Language-Guided Robots
+  venue: Invited talk, USC Theta Tau
+- date: Nov 2024
+  title: Building and Evaluating Language-Guided Robots
+  venue: Guest lecture, USC CSCI 444 Natural Language Processing
+- date: Oct 2024
+  title: "ReMEmbR: Building and Reasoning Over Spatio-Temporal Memory for Robot Navigation"
+  venue: Invited talk, <span class="nv">NVIDIA</span> Jetson AI Lab
+  href: https://www.jetson-ai-lab.com/research.html
+- date: Sept 2022
+  title: "Human-Robot Commensality: Bite Timing Prediction for Robot-Assisted Feeding in Groups"
+  venue: SoCal Robotics Symposium
+- date: July 2020
+  title: Evolving Spiking Circuit Motifs using Weight Agnostic Neural Networks
+  venue: ACM International Conference on Neuromorphic Systems (ICONS)

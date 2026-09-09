@@ -1,25 +1,60 @@
 ---
 permalink: /404.html
-layout: default
+layout:
+sitemap: false
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found &middot; {{ site.title | escape }}</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#FDFBF6;--ink:#20201E;--body:#4a453e;--muted:#7d786f;--rule:#e6e0d4;
+        --orange:#E8572A;--teal:#31918D;--plum:#83205A;--gold:#E0A038}
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"EB Garamond",Georgia,serif;font-size:19px;line-height:1.62;
+       -webkit-font-smoothing:antialiased;
+       display:flex;align-items:center;justify-content:center;padding:40px 26px}
+  .card{max-width:520px;text-align:center}
+  .num{font-family:"Newsreader",serif;font-weight:300;font-size:104px;line-height:1;
+       letter-spacing:-.02em;margin:0;color:var(--ink)}
+  .gradrule{height:2px;margin:18px auto 22px;max-width:250px;border-radius:2px;opacity:.8;
+            background:linear-gradient(90deg,var(--orange),var(--gold) 30%,var(--teal) 65%,var(--plum))}
+  h1{font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+     color:var(--plum);margin:0 0 12px}
+  p{margin:0 0 8px;color:var(--body)}
+  p.sub{color:var(--muted);font-size:17px}
+  .links{margin-top:26px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;
+         font-size:17px}
+  .links a{color:var(--body);text-decoration:none;display:flex;align-items:center;gap:9px}
+  .links a i{width:6px;height:6px;border-radius:50%;background:var(--rule);
+             display:inline-block;transition:background .2s,transform .2s}
+  .links a:hover{color:var(--ink)}
+  .links a:nth-child(1):hover i{background:var(--orange)}
+  .links a:nth-child(2):hover i{background:var(--teal)}
+  .links a:nth-child(3):hover i{background:var(--plum)}
+  .links a:hover i{transform:scale(1.5)}
+  @media (max-width:520px){ .num{font-size:76px} }
 </style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+</head>
+<body>
+  <div class="card">
+    <p class="num">404</p>
+    <div class="gradrule"></div>
+    <h1>Page not found</h1>
+    <p>This page doesn't exist &mdash; or it moved when I redesigned the site.</p>
+    <p class="sub">If you followed a link here, feel free to let me know.</p>
+    <div class="links">
+      <a href="{{ '/' | relative_url }}"><i></i>home</a>
+      <a href="{{ '/#research' | relative_url }}"><i></i>research</a>
+      <a href="{{ '/#news' | relative_url }}"><i></i>news</a>
+    </div>
+  </div>
+</body>
+</html>
