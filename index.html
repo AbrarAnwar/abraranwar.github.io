@@ -29,6 +29,7 @@ layout:
     --teal:#31918D;
     --plum:#83205A;
     --gold:#E0A038;
+    --nv:#76B900;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--ink);
@@ -49,6 +50,8 @@ layout:
            margin:22px 0 8px;letter-spacing:-.005em}
   .side .role{font-size:16.5px;color:var(--muted);line-height:1.45}
   .side .role em{font-style:italic;color:var(--plum)}
+  .nv{color:var(--nv)}
+  a .nv{color:var(--nv)}
   .side .mail{font-size:16px;color:var(--muted);margin-top:16px}
   .side .icons{display:flex;gap:20px;margin-top:14px;font-size:32px}
   .side .icons a{color:var(--muted);border:0}
@@ -140,7 +143,7 @@ layout:
   <aside class="side">
     <img alt="Abrar Anwar" src="{{ '/assets/images/index/abrar.png' | relative_url }}">
     <h1>Abrar<br>Anwar</h1>
-    <div class="role">Ph.D. student at <em>USC</em><br>language-guided robots &amp; HRI</div>
+    <div class="role">Robotics @ <span class="nv">NVIDIA</span></div>
     <div class="mail">aanwar [at] nvidia [dot] com</div>
     <div class="icons">
       <a title="Google Scholar" target="_blank" href="https://scholar.google.com/citations?user=c6E-5tcAAAAJ&hl=en"><i class="ai ai-google-scholar-square"></i></a>

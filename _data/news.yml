@@ -32,11 +32,11 @@
 - date: May 2025
   recent: true
   html: >-
-    I am interning at <a target="_blank" href="https://www.nvidia.com/en-us/">NVIDIA</a> again with the
+    I am interning at <a target="_blank" href="https://www.nvidia.com/en-us/"><span class="nv">NVIDIA</span></a> again with the
     Isaac Mobility foundation models team!
 - date: Oct 2024
   html: >-
-    Gave a talk at the <a target="_blank" href="https://www.jetson-ai-lab.com/research.html">NVIDIA Jetson AI Lab</a>
+    Gave a talk at the <a target="_blank" href="https://www.jetson-ai-lab.com/research.html"><span class="nv">NVIDIA</span> Jetson AI Lab</a>
     on <a target="_blank" href="https://arxiv.org/abs/2406.13636">ReMEmbR</a>
 - date: Sept 2024
   html: >-
@@ -48,7 +48,7 @@
     multi-view language grounding</a> at NAACL 2024 in Mexico City!
 - date: May 2024
   html: >-
-    Started my internship at <a target="_blank" href="https://www.nvidia.com/en-us/">NVIDIA</a> working on foundation
+    Started my internship at <a target="_blank" href="https://www.nvidia.com/en-us/"><span class="nv">NVIDIA</span></a> working on foundation
     models for autonomous mobile robots with <a target="_blank" href="https://www.joydeepb.com/">Prof. Joydeep Biswas</a>
     and <a target="_blank" href="https://www.linkedin.com/in/yanchang1/">Dr. Yan Chang</a>
 - date: Mar 2024
