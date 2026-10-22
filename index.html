@@ -216,7 +216,7 @@ image: /assets/images/index/abrar.png
           <video src="{{ post.mp4 | relative_url }}" poster="{{ post.image | relative_url }}"
                  autoplay muted loop playsinline preload="metadata"></video>
           {%- else -%}
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          <img src="{{ post.gif | default: post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
           {%- endif -%}
         </div>
         <div>
