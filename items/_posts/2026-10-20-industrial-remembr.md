@@ -8,7 +8,6 @@ gif: /assets/images/index/gifs/industrial-remembr.gif
 authors: Jad Yammine, Malek Wahidi, <b>Abrar Anwar</b>, Yan Chang, Mihir Acharya, Anthony Rizk
 venue: Technical Report · October 2026
 arxiv: https://arxiv.org/abs/2610.28624
-tech_report: https://arxiv.org/pdf/2610.28624
 ---
 
 Industrial ReMEmbR extends spatiotemporal memory to robot fleets, encoding observations on the robot and generating scene descriptions only on demand. A retrieval agent queries shared memories by content, location, and time without uploading raw camera frames.
