@@ -6,7 +6,7 @@ categories: research
 image: /assets/images/index/industrial-remembr.png
 gif: /assets/images/index/gifs/industrial-remembr.gif
 authors: Jad Yammine, Malek Wahidi, <b>Abrar Anwar</b>, Yan Chang, Mihir Acharya, Anthony Rizk
-venue: Technical Report · October 2026
+venue: Technical Report · 2026
 arxiv: https://arxiv.org/abs/2610.28624
 ---
 
